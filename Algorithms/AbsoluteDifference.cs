@@ -31,6 +31,6 @@ public class AbsoluteDifferenceSimplified
         int dif = 51; //The desired difference point
         
         if(n > dif) return (n - dif) * 3;
-        else return dif - n;
+        return dif - n;
     }
 }
