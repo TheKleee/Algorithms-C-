@@ -1,6 +1,7 @@
 //Write a C# Sharp program to compute the sum of the two given integer values. If the two values are the same, then return triple their sum.
 
-public class Hello{
+public class SumTask
+{
     public static void Main()
     {
         System.Console.WriteLine($"Sum of 3 and 4 is: " + SumOrTriple(3, 4));
