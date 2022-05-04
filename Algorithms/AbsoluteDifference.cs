@@ -2,7 +2,7 @@
 
 using System;
 
-public class Hello
+public class AbsoluteDifference
 {
     public static void Main()
     {
