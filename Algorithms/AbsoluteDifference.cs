@@ -20,7 +20,7 @@ public class AbsoluteDifference
 //Without Math methods:
 public class AbsoluteDifferenceSimplified
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         System.Console.WriteLine("Absolute difference of 3 and 51 is: " + AbsoluteDifference(3));
         System.Console.WriteLine("Absolute difference of 57 and 51 is not: " + AbsoluteDifference(57));
