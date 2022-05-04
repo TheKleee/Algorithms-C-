@@ -17,7 +17,7 @@ public class AbsoluteDifference
     }
 }
 
-//Without Math methods
+//Without Math methods:
 public class AbsoluteDifferenceSimplified
 {
     public static void Main()
