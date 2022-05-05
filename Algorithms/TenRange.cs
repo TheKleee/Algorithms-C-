@@ -5,9 +5,9 @@ public class TenRangeMath
 {
     public static void Main(string[] args)
     {
-        System.Console.WriteLine("3 is in the range? " + RangeCheckMath(3));
-        System.Console.WriteLine("92 is in the range? " + RangeCheckMath(92));
-        System.Console.WriteLine("201 is in the range? " + RangeCheckMath(200));
+        Console.WriteLine("3 is in the range? " + RangeCheckMath(3));
+        Console.WriteLine("92 is in the range? " + RangeCheckMath(92));
+        Console.WriteLine("201 is in the range? " + RangeCheckMath(200));
     }
     
     public static bool RangeCheckMath(int x)
