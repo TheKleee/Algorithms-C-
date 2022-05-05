@@ -25,7 +25,7 @@ public class DataIfStringSubstring
 
     private static string IfStringSubstring(string data)
     {
-        if (data.Length > 2 && data.Substring(0, 2).Equals("if")) return data;
+        if (data.Substring(0, 2).Equals("if")) return data;
         return $"if{data}";
     }
 }
