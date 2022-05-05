@@ -7,8 +7,8 @@ public class AbsoluteDifference
 {
     public static void Main()
     {
-        System.Console.WriteLine("Absolute difference of 3 and 51 is: " + AbsoluteDifference(3));
-        System.Console.WriteLine("Absolute difference of 57 and 51 is not: " + AbsoluteDifference(57));
+        Console.WriteLine("Absolute difference of 3 and 51 is: " + AbsoluteDifference(3));
+        Console.WriteLine("Absolute difference of 57 and 51 is not: " + AbsoluteDifference(57));
     }
     
     public static int AbsoluteDifference(int n)
