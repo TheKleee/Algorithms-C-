@@ -17,7 +17,7 @@ public class TenRangeMath
     }
 }
 
-//Without namespace directives:
+//Without namespace directives (mainly not using Math):
 public class TenRange
 {
     public static void Main(string[] args)
