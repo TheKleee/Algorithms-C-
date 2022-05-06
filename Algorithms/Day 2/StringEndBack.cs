@@ -18,3 +18,21 @@ public class StringEndBack
         return test + data + test;
     }
 }
+
+public class StringEndBackNoSubstring
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine($" {StringThreeEditNoSubstring("someting")}");
+        Console.WriteLine($" {StringThreeEditNoSubstring("ty")}");
+    }
+
+    private static string StringThreeEditNoSubstring(string data)
+    {
+        string test = "";   //String initialized
+        for (int i = 0; i < (data.Length > 3 ? 3 : data.Length); i++)
+            test += data[i];
+
+        return test + data + test;
+    }
+}
