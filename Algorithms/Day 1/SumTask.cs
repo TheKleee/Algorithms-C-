@@ -10,6 +10,6 @@ public class SumTask
     
     public static int SumOrTriple(int x, int y)
     {
-        return x != y ? x + y :(x+ y) * 3;
+        return x != y ? x + y : (x+ y) * 3;
     }
 }
