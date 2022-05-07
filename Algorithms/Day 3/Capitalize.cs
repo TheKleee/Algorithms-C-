@@ -5,7 +5,7 @@
 
 using System;
 
-public class ConvertUpperCase
+public class Capitalize
 {
     static void Main(string[] args)
     {
