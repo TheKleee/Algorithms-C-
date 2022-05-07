@@ -17,6 +17,6 @@ public class LastDigit
 
     private static bool CheckIfPositive(int x, int y)
     {
-        return x > 0 && y > 0;
+        return x >= 0 && y >= 0;
     }
 }
