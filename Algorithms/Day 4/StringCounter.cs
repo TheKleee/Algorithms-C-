@@ -19,11 +19,9 @@ public class StringCounter
     public static int TimesTwoCharRepeatInString(string data)
     {
         string twoChars = data.Substring(data.Length - 2);
-       
-        string dataClone = data.Substring(0, data.Length - 2);
         int times = 0;
-        for (int i = 1; i < dataClone.Length; i++)
-            if (twoChars[0] == dataClone[i - 1] && twoChars[1] == dataClone[i])
+        for (int i = 1; i < data.Length - 2; i++)
+            if (twoChars[0] == data[i - 1] && twoChars[1] == data[i])
                 times++;
 
         return times;
