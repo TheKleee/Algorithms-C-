@@ -8,7 +8,6 @@ public class SequenceOTT
 {
     static void Main(string[] args)
     {
-        ;
         Console.WriteLine($"{ContainsSequence(new[] { 1, 2, 3, 4, 5 })}");
         Console.WriteLine($"{ContainsSequence(new[] { 2, 3, 4, 1, 7 })}");
     }
