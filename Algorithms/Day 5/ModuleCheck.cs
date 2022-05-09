@@ -4,7 +4,6 @@
 
 using System;
 
-//With Math methods
 public class ModuleCheck
 {
     static void Main(string[] args)
