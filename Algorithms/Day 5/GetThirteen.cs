@@ -4,7 +4,6 @@
 
 using System;
 
-//With Math methods
 public class GetThirteen
 {
     static void Main(string[] args)
@@ -14,11 +13,9 @@ public class GetThirteen
         Console.WriteLine($"{ThirteenCheck(25)}");
         Console.WriteLine($"{ThirteenCheck(26)}");
     }
+    
     public static bool ThirteenCheck(int x)
     {
-        if (x > 1)
-            return x % 13 == 0 || x % 13 == 1;
-        else
-            return false;
+        return x > 1 ? x % 13 == 0 || x % 13 == 1 : false;
     }
 }
