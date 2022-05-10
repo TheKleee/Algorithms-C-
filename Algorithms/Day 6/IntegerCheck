@@ -1,0 +1,19 @@
+/*
+ * Write a C# Sharp program to check if two or more non-negative given integers have the same rightmost digit.
+ */
+
+using System;
+
+public class IntegerCheck
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine($"{RightmostDigit<bool>(1, 2)}");
+        Console.WriteLine($"{RightmostDigit<bool>(103, 23)}");
+        Console.WriteLine($"{RightmostDigit<bool>(173, 1953)}");
+    }
+    public static T RightmostDigit<T>(int x, int y) where T: struct
+    {
+        return (T) Convert.ChangeType(x > 0 && y > 0 ? x % 10 == y % 10 : false, typeof(T));
+    }
+}
