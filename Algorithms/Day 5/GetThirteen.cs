@@ -19,3 +19,17 @@ public class GetThirteen
         return x > 1 ? x % 13 == 0 || x % 13 == 1 : false;
     }
 }
+
+public class GetThirteenGeneric
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine($"{ThirteenCheckGeneric<bool>(1)}");
+        Console.WriteLine($"{ThirteenCheckGeneric<bool>(13)}");
+        Console.WriteLine($"{ThirteenCheckGeneric<bool>(27)}");
+    }
+    public static T ThirteenCheckGeneric<T>(int x) where T: struct
+    {
+            return (T) Convert.ChangeType(x > 1 ? x % 13 == 0 || x % 13 == 1 : false, typeof(T));
+    }
+}
