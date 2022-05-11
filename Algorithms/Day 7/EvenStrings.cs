@@ -31,6 +31,6 @@ public class EvenStrings
 
     static string HalfString(string data)
     {
-        return data.Length % 2 == 0 ? data.Substring(0, data.Length / 2) : "The string lenght should be an even number!";
+        return data.Length % 2 == 0 ? data.Substring(0, data.Length / 2) : "The string length should be an even number!";
     }
 }
