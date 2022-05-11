@@ -33,6 +33,6 @@ public class StringProgram
     static string TwoCharXThree(string data)
     {
         string s = data.Length >= 2 ? data.Substring(data.Length - 2) : "";
-        return s.Length > 0 ? s + s + s : "The string provided must be at least 2 characters long!"; ;  
+        return s.Length > 0 ? s + s + s : "The string provided must be at least 2 characters long!";
     }
 }
