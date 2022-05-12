@@ -4,7 +4,7 @@
 
 using System;
 
-public class StringEditor
+public class DefineString
 {
     public static void Main(string[] args)
     {
