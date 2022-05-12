@@ -1,0 +1,21 @@
+/*
+ * Write a C# Sharp program to create a new string using the first and last n characters from a given string of length at least n.
+ */
+
+using System;
+
+public class StringDeveloper
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine($"{FirstLastNChars("Norton", 2)}");
+        Console.WriteLine($"{FirstLastNChars("demi", 3)}");
+        Console.WriteLine($"{FirstLastNChars("do", 1)}");
+        Console.WriteLine($"{FirstLastNChars("n", 2)}");
+    }
+
+    public static string FirstLastNChars(string data, int len)
+    {
+        return (data.Length < 2 && data.Length < len) ? data : data.Substring(0, len) + data.Substring(data.Length - len);
+    }
+}
