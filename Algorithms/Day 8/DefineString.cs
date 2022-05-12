@@ -1,5 +1,5 @@
 /*
- * Write a C# Sharp program to create a new string using the two middle characters of a given string of even length (at least 2).
+ * Write a C# Sharp program to create a new string without the first and last character of a given string of any length.
  */
 
 using System;
