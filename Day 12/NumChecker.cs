@@ -4,7 +4,7 @@
 
 using System;
 
-public class CheckNum
+public class NumChecker
 {
     public static void Main(string[] args)
     {
