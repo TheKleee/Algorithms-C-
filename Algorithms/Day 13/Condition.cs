@@ -17,7 +17,7 @@ public class Condition
     {
         bool ThreeToFive = false;
         if (a.Length > 1)
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 1; i < a.Length; i++)
                 if (a[i] == 3 && a[i - 1] == 5 || a[i] == 5 && a[i - 1] == 3)
                 {
                     ThreeToFive = true;
