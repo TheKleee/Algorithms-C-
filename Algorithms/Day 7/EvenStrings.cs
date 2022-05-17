@@ -9,7 +9,7 @@ public class EvenStrings
     #region Event:
     public delegate void MyEvent();
     public static event MyEvent myEvent;
-    
+
     public static void Main(string[] args)
     {
         myEvent += EventData;
@@ -29,8 +29,6 @@ public class EvenStrings
         myEvent -= EventData;
     }
 
-    static string HalfString(string data)
-    {
-        return data.Length % 2 == 0 ? data.Substring(0, data.Length / 2) : "The string length should be an even number!";
-    }
+    static string HalfString(string data) =>
+        data.Length % 2 == 0 ? data.Substring(0, data.Length / 2) : "The string length should be an even number!";   
 }
