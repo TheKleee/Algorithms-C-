@@ -18,7 +18,7 @@ public class ConditionChecker
     {
         bool fiveToFive = false;
         if (a.Length > 1)
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 1; i < a.Length; i++)
                 if (a[i] == 5 && a[i - 1] == 5)
                 {
                     fiveToFive = true;
