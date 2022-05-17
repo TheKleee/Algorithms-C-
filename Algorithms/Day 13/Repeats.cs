@@ -16,24 +16,24 @@ public class Repeats
 
     private static bool FiveTimesFiveNotInRow(int[] a)
     {
-        bool evenOrOdd = false;
+        bool fiveCheck = false;
         int five = a[0] == 5 ? 1 : 0;
         if (a.Length > 1)
             for (int i = 1; i < a.Length; i++)
             {
                 if (a[i] == 5 && a[i - 1] == 5)
                 {
-                    evenOrOdd = false;
+                    fiveCheck = false;
                     break;
                 }
 
                 five += a[i]== 5 ? 1 : 0;
                 if(five == 5)
                 {
-                    evenOrOdd = true;
+                    fiveCheck = true;
                     break;
                 }
             }
-        return evenOrOdd;
+        return fiveCheck;
     }
 }
