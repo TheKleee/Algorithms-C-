@@ -5,7 +5,7 @@
 
 using System;
 
-public abstract class ConditionChecker
+public class ConditionChecker
 {
     public static void Main(string[] args)
     {
