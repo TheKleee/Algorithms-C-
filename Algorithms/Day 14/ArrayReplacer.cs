@@ -26,7 +26,7 @@ namespace ArrayEditor
         {
             #region Exceptions:
             if (a == null)
-                throw new NullReferenceException("The given array must not be null!");
+                throw new ArgumentNullException("a", "The given array must not be null!");
 
             if (length > a.Length || length <= 0)
                 throw new ArgumentOutOfRangeException("length", "The given length is outside of the array element range!");
