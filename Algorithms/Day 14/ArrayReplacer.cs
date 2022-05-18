@@ -65,7 +65,7 @@ namespace ArrayEditor
 
         public static int[] ShiftZeroArray(this int[] arr)
         {
-            if (arr.Length < 1 || a == null)
+            if (arr.Length < 1 || arr == null)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
             for (int i = 1; i < arr.Length; i++)
