@@ -25,8 +25,8 @@ namespace ArrayEditor
         public static T[] BasicArray<T>(this T[] a, int length) where T : struct
         {
             #region Exceptions:
-            if (a.Length < 1)
-                throw new NullReferenceException("The given array must contain at least one element!");
+            if (a == null)
+                throw new NullReferenceException("The given array must not be null!");
 
             if (length > a.Length || length <= 0)
                 throw new ArgumentOutOfRangeException("length", "The given length is outside of the array element range!");
@@ -41,7 +41,7 @@ namespace ArrayEditor
 
         public static T[] FlipArray<T>(this T[] a) where T : struct
         {
-            if (a.Length < 1)
+            if (a.Length < 1 || a == null)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
             T[] flipped = new T[a.Length];
@@ -55,7 +55,7 @@ namespace ArrayEditor
         #region Int Arrays:
         public static int[] FiveToZero(this int[] a)
         {
-            if (a.Length < 1)
+            if (a.Length < 1 || a == null)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
             for (int i = 0; i < a.Length; i++)
@@ -65,7 +65,7 @@ namespace ArrayEditor
 
         public static int[] ShiftZeroArray(this int[] arr)
         {
-            if (arr.Length < 1)
+            if (arr.Length < 1 || a == null)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
             for (int i = 1; i < arr.Length; i++)
@@ -89,7 +89,7 @@ namespace ArrayEditor
     {
         public static void DisplayArray<T>(this T[] a) where T : struct
         {
-            if (a.Length < 1)
+            if (a.Length < 1 || a == null)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
             foreach (var r in a) Console.Write($"{r} ");
@@ -98,7 +98,7 @@ namespace ArrayEditor
 
         public static void DisplayMultipleArrays<T>(this T[][] multiArray) where T : struct
         {
-            if (multiArray.Length < 1)
+            if (multiArray.Length < 1 || multiArray == null)
                 throw new NullReferenceException("The given jagged array must contain at least one array as an element!");
 
             foreach (var mA in multiArray)
