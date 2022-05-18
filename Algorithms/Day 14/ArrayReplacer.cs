@@ -42,7 +42,7 @@ namespace ArrayEditor
         public static T[] FlipArray<T>(this T[] a) where T : struct
         {
             if (a.Length < 1 || a == null)
-                throw new NullReferenceException("The given array must contain at least one element!");
+                throw new ArgumentNullException("a", "The given array must contain at least one element!");
 
             T[] flipped = new T[a.Length];
             for (int i = 0; i < a.Length; i++)
@@ -56,7 +56,7 @@ namespace ArrayEditor
         public static int[] FiveToZero(this int[] a)
         {
             if (a.Length < 1 || a == null)
-                throw new NullReferenceException("The given array must contain at least one element!");
+                throw new ArgumentNullException("a", "The given array must contain at least one element!");
 
             for (int i = 0; i < a.Length; i++)
                 a[i] = a[i] == 5 ? 0 : a[i];
@@ -66,7 +66,7 @@ namespace ArrayEditor
         public static int[] ShiftZeroArray(this int[] arr)
         {
             if (arr.Length < 1 || arr == null)
-                throw new NullReferenceException("The given array must contain at least one element!");
+                throw new ArgumentNullException("a", "The given array must contain at least one element!");
 
             for (int i = 1; i < arr.Length; i++)
             {
@@ -90,7 +90,7 @@ namespace ArrayEditor
         public static void DisplayArray<T>(this T[] a) where T : struct
         {
             if (a.Length < 1 || a == null)
-                throw new NullReferenceException("The given array must contain at least one element!");
+                throw new ArgumentNullException("a", "The given array must contain at least one element!");
 
             foreach (var r in a) Console.Write($"{r} ");
             Console.WriteLine("");
@@ -99,7 +99,7 @@ namespace ArrayEditor
         public static void DisplayMultipleArrays<T>(this T[][] multiArray) where T : struct
         {
             if (multiArray.Length < 1 || multiArray == null)
-                throw new NullReferenceException("The given jagged array must contain at least one array as an element!");
+                throw new ArgumentNullException("a", "The given jagged array must contain at least one array as an element!");
 
             foreach (var mA in multiArray)
                 mA.DisplayArray();
