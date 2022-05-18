@@ -28,8 +28,8 @@ namespace ArrayEditor
             if (a.Length < 1)
                 throw new NullReferenceException("The given array must contain at least one element!");
 
-            if (length > a.Length)
-                throw new ArgumentOutOfRangeException("length", "The given array length is longer than the original array!");
+            if (length > a.Length || length <= 0)
+                throw new ArgumentOutOfRangeException("length", "The given length is outside of the array element range!");
             #endregion exceptions />
 
             T[] temp = new T[length];
