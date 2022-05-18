@@ -13,7 +13,7 @@ public static class ArrayReplacer
         int[] a1 = new int[] { 0, 1, 5, 2, 0, 5, 7 }.FlipArray().FiveToZero().ShiftZeroArray().FlipArray();
         int[] a2 = new int[] { 1, 2, 5, 0, 5, 0, 3, 0 }.FlipArray().FiveToZero().ShiftZeroArray().FlipArray();
         int[] a3 = new int[] { 0, 5, 1 }.FlipArray().FiveToZero().ShiftZeroArray().FlipArray();
-        ReadArray.DisplayMultipleArrays(new int[][] { a1, a2, a3});
+        ReadArray.DisplayMultipleArrays(new int[][] { a1, a2, a3 });
     }
 }
 
@@ -24,6 +24,14 @@ namespace ArrayEditor
         #region Generic Arrays:
         public static T[] BasicArray<T>(this T[] a, int length) where T : struct
         {
+            #region Exceptions:
+            if (a.Length < 1)
+                throw new NullReferenceException("The given array must contain at least one element!");
+
+            if (length > a.Length)
+                throw new ArgumentOutOfRangeException("length", "The given array length is longer than the original array!");
+            #endregion exceptions />
+
             T[] temp = new T[length];
             for (int i = 0; i < length; i++)
                 temp[i] = a[i];
@@ -33,6 +41,9 @@ namespace ArrayEditor
 
         public static T[] FlipArray<T>(this T[] a) where T : struct
         {
+            if (a.Length < 1)
+                throw new NullReferenceException("The given array must contain at least one element!");
+
             T[] flipped = new T[a.Length];
             for (int i = 0; i < a.Length; i++)
                 flipped[a.Length - 1 - i] = a[i];
@@ -44,6 +55,9 @@ namespace ArrayEditor
         #region Int Arrays:
         public static int[] FiveToZero(this int[] a)
         {
+            if (a.Length < 1)
+                throw new NullReferenceException("The given array must contain at least one element!");
+
             for (int i = 0; i < a.Length; i++)
                 a[i] = a[i] == 5 ? 0 : a[i];
             return a;
@@ -51,9 +65,12 @@ namespace ArrayEditor
 
         public static int[] ShiftZeroArray(this int[] arr)
         {
+            if (arr.Length < 1)
+                throw new NullReferenceException("The given array must contain at least one element!");
+
             for (int i = 1; i < arr.Length; i++)
             {
-                if(arr[i] == 0)
+                if (arr[i] == 0)
                 {
                     int[] temp = arr.BasicArray(i);
                     for (int j = 0; j < temp.Length; j++)
@@ -72,12 +89,18 @@ namespace ArrayEditor
     {
         public static void DisplayArray<T>(this T[] a) where T : struct
         {
+            if (a.Length < 1)
+                throw new NullReferenceException("The given array must contain at least one element!");
+
             foreach (var r in a) Console.Write($"{r} ");
             Console.WriteLine("");
         }
 
         public static void DisplayMultipleArrays<T>(this T[][] multiArray) where T : struct
         {
+            if (multiArray.Length < 1)
+                throw new NullReferenceException("The given jagged array must contain at least one array as an element!");
+
             foreach (var mA in multiArray)
                 mA.DisplayArray();
         }
