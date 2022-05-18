@@ -15,7 +15,8 @@ public static class FifteenCheck
         int[] a2 = new int[] { 1, 2, 15, 15, 0, 3, 0 };
         int[] a3 = new int[] { 3, 5, 8 };
         int[] a4 = new int[] { 15 };
-        ReadArray.DisplayArray(new bool[] { a1.TwoInARow(), a2.TwoInARow(), a3.TwoInARow(), a4.TwoInARow() });
+        //int[] a5 = new int[] { };
+        ReadArray.DisplayArray(new bool[] { a1.TwoInARow(), a2.TwoInARow(), a3.TwoInARow(), a4.TwoInARow(), /*a5.TwoInARow()*/ });
     }
 }
 
@@ -26,6 +27,9 @@ namespace ArrayEditor
         #region Boolean Arrays:
         public static bool TwoInARow(this int[] a, int num = 15)
         {
+            if (a.Length < 1)
+                throw new ArgumentOutOfRangeException("a", "The given array is empty!");
+
             if(a.Length > 0)
                 for (int i = 1; i < a.Length; i++)
                     if (a[i] == num && a[i - 1] == num) return true;
