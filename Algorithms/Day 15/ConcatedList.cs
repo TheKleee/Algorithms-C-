@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using ListEditor;
 
 #region Area where Junior can change things:
-public static class HashList
+public static class ConcatedList
 {
     public static void Main(string[] args)
     {
