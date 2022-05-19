@@ -49,21 +49,21 @@ namespace ListEditor
     public static class ReadList
     {
         #region String List:
-        public static void DisplayList(this List<string> l)
+        public static void DisplayList<T>(this List<T> l)
         {
             if (l.Count < 1 || l == null)
                 throw new ArgumentNullException("The given list must contain at least one element!");
 
-            foreach (string r in l) Console.Write($"{r} ");
+            foreach (var r in l) Console.Write($"{r} ");
             Console.WriteLine("");
         }
 
-        public static void DisplayMultipleLists(this List<List<string>> multiList)
+        public static void DisplayMultipleLists<T>(this List<List<T>> multiList)
         {
             if (multiList.Count < 1 || multiList == null)
                 throw new ArgumentNullException("The given jagged list must contain at least one list as an element!");
 
-            foreach (List<string> mA in multiList)
+            foreach (var mA in multiList)
                 mA.DisplayList();
         }
         #endregion string list />
